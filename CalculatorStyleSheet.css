@@ -1,0 +1,385 @@
+@font-face {
+    font-family: angsai;
+    src: url('./Contents/Fonts/angsai.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: segoe;
+    src: url('./Contents/Fonts/seguisb.ttf') format('truetype');
+}
+
+
+/* 720px*/
+
+@media screen and (max-width: 850px) {
+    .secondColumn {
+        display: none !important;
+    }
+    .firstColumn,
+    .firstColumn .calculator {
+        width: 100% !important;
+    }
+    #memoryHidden,
+    .type .rightType {
+        display: flex !important;
+    }
+    .memory {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .addRow {
+        display: flex !important;
+    }
+    #column1.column {
+        display: none;
+    }
+    .column {
+        width: 25% !important;
+    }
+    .button,
+    i.button {
+        height: 16.66% !important;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    user-select: none;
+}
+
+.min-max {
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    min-width: 300px;
+}
+
+body {
+    background-color: rgba(234, 234, 234, 0.74);
+}
+
+.top {
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    width: 100%;
+    cursor: default;
+    font-family: segoe;
+    font-size: 0.72rem;
+    padding-left: 12px;
+}
+
+.window {
+    width: 150px;
+    display: flex;
+    flex-grow: 1;
+}
+
+.window>div {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 0px;
+}
+
+.closeBar {
+    cursor: pointer;
+}
+
+.closeBar:hover {
+    background: #dadada;
+}
+
+.closeBar:active {
+    background: #c3c3c3;
+}
+
+#close:hover {
+    background: #fb7373c7;
+}
+
+#close:active {
+    background: #fb7373;
+}
+
+.window .maximize {
+    padding: 0 20px;
+}
+
+
+/* History-Memory */
+
+.secondColumn {
+    display: flex;
+    justify-content: flex-start;
+    width: 321px;
+    position: fixed;
+    top: 35px;
+    right: 0;
+}
+
+.row-history {
+    margin: 10px 17px;
+    display: flex;
+    font-size: 16px;
+    font-family: segoe;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+    height: 30px;
+}
+
+.row-history:hover {
+    border-bottom: 3px solid rgb(64, 104, 225);
+}
+
+
+/*---- Calculator ----*/
+
+.padding {
+    padding: 12px;
+}
+
+.firstColumn .calculator {
+    position: fixed;
+    top: 68px;
+    bottom: 0;
+    left: 0;
+    right: 321px;
+    min-width: 300px;
+    min-height: 500px;
+}
+
+.firstColumn {
+    float: left;
+}
+
+.fixScreen {
+    min-height: 500px;
+    min-width: 500px;
+}
+
+.type .leftType {
+    display: flex;
+    justify-content: flex-start;
+    color: rgb(61, 57, 57);
+    width: 100%;
+}
+
+.type .rightType {
+    width: 10%;
+    display: none;
+    justify-content: flex-end;
+}
+
+.firstColumn .type {
+    width: 100%;
+    height: 38px;
+    display: flex;
+}
+
+div.calc-menu:hover,
+div.calc-topkey:hover {
+    background: #dadada;
+    box-shadow: 0 0 0 1px rgb(175, 175, 175) inset;
+    cursor: default;
+}
+
+div.calc-menu:active,
+div.calc-topkey:active {
+    background: #c3c3c3;
+}
+
+.calc-type {
+    margin-top: -7px;
+    font-family: segoe;
+    font-size: 19px;
+    cursor: default;
+}
+
+
+/* Screen Main and History-Screen */
+
+.screen {
+    height: 21%;
+    min-height: 170px;
+}
+
+.history-screen {
+    height: 25%;
+}
+
+.main-screen {
+    height: 75%;
+}
+
+#main {
+    border: 0;
+    background: transparent;
+    text-align: right;
+    width: 100%;
+    height: 100%;
+    font-size: max(40px, 3.75vw);
+    font-family: segoe;
+    color: black;
+    padding: 0px 12px 72px 0px;
+}
+
+#history {
+    padding: 32px 15px 0px 0px;
+    text-align: right;
+    border: none;
+    background: transparent;
+    width: 100%;
+    color: #696969;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+
+/* Memory */
+
+.memory {
+    height: 7%;
+    display: flex;
+    padding: 0px 1px 3px 3px;
+    font-family: segoe;
+    width: 405px;
+    align-items: center;
+    justify-content: center;
+}
+
+#memoryHidden {
+    display: none;
+}
+
+.memory>div {
+    display: flex;
+    height: 100%;
+    font-size: 0.75rem;
+    font-weight: bold;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+.memory>div:hover {
+    background: #dadada;
+    box-shadow: 0 0 0 1px rgb(175, 175, 175) inset;
+}
+
+.memory>div:active {
+    background: #c3c3c3;
+    ;
+    box-shadow: 0 0 0 1px rgb(175, 175, 175) inset;
+}
+
+
+/* buttons; Operator and Operand */
+
+.digit {
+    padding-left: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 68%;
+}
+
+.column {
+    width: 20%;
+    flex-wrap: wrap;
+}
+
+.button,
+i.button {
+    border: 2px solid rgba(234, 234, 234, 0.74);
+    border-left: none;
+    border-top: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+}
+
+.addRow {
+    display: none;
+}
+
+.responsive {
+    width: 25%;
+}
+
+.button:hover {
+    background: #dadada;
+}
+
+.button:active {
+    background: #c3c3c3;
+}
+
+.operand {
+    background-color: white;
+    font-family: segoe;
+    font-size: 2.1rem;
+    font-weight: 600;
+}
+
+.operator {
+    font-size: 1.47rem;
+}
+
+.colorful {
+    background: rgb(245, 245, 245);
+}
+
+.operator:hover,
+.operand:hover {
+    box-shadow: 0 0 0 1px rgb(175, 175, 175) inset;
+}
+
+.sign-operator.button {
+    font-size: 1.4rem;
+}
+
+.iconTitleBar {
+    width: 10px;
+    height: 10px;
+}
+
+.iconCalc {
+    width: 23px;
+    height: 23px;
+}
+
+.multiply {
+    width: 20px;
+    height: 20px;
+}
+
+.iconType {
+    width: 15px;
+    height: 13px;
+}
+
+.angsai {
+    font-family: angsai;
+}
+
+.segoe {
+    font-family: segoe;
+}
+
+.arial {
+    font-family: Arial, Helvetica, sans-serif;
+}

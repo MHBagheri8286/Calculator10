@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="CalculatorStyleSheet.css">
+
+</head>
+
+<body class="min-max">
+    <div class="top">
+        <h5 class="title">Calculator</h5>
+        <div class="window">
+            <div class="closeBar">
+                <img class="iconTitleBar" src="./Contents/SVG/horizontal-line.svg" alt="">
+            </div>
+            <div class="closeBar">
+                <img class="iconTitleBar" src="./Contents/SVG/square-shape.svg" alt="">
+            </div>
+            <div id=close class="closeBar">
+                <img class="iconTitleBar" src="./Contents/SVG/cross-out.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- create class for calculator 70% width -->
+    <div class="firstColumn">
+
+        <!-- class for type -->
+        <div class="type">
+
+            <!-- class for leftType -->
+            <div class="leftType">
+                <div class=" padding calc-menu " role="button">
+                    <img class="iconType" src="./Contents/SVG/menu.svg" alt="">
+                </div>
+                <label class=" padding calc-type"><span style="font-size: 20px;">S</span>tandard</label>
+                <div class=" padding calc-topkey ">
+                    <img class="iconType" src="./Contents/SVG/expand.svg" alt="">
+                </div>
+            </div>
+
+            <!-- class for rightType -->
+            <div class="rightType" role="button">
+                <div class=" padding calc-topkey ">
+                    <img class="iconType" src="./Contents/SVG/history.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- class for calculator -->
+        <div class="calculator">
+            <div class="screen">
+                <div class="history-screen">
+                    <input id="history" name="history" type="text" value="" disabled>
+                </div>
+                <div class="main-screen">
+                    <input id="main" name="main" class="padding" value="0" type="text" disabled>
+                </div>
+            </div>
+
+            <div class="memory">
+                <div style="color: #bfbfbf;" role="button">MC</div>
+                <div style="color: #bfbfbf;" role="button">MR</div>
+                <div role="button">M+</div>
+                <div role="button">M-</div>
+                <div role="button">MS</div>
+                <div id=memoryHidden role="button">M</div>
+            </div>
+
+            <div class="digit">
+
+                <div id="column1" class="column">
+                    <div id="percentage" style="font-size: 1.8rem;" class="button operator colorful" data-value="percentage" role="button">
+                        <span style="font-family: arial;
+                        ">%</span>
+                    </div>
+                    <div id="sqrt" class="button operator colorful" data-value="sqrt" role="button">
+
+                        <sup class="segoe" style="margin-bottom: 14px; margin-right: -6px; font-size: 1rem;">2</sup>
+                        <img class="iconCalc" src="./Contents/SVG/square-root.svg" alt="">
+                        <sub class="angsai" style="font-size: 2.5rem; margin-left: -7px; margin-top: -2px;">x</sub>
+                    </div>
+                    <div id="sqr" class="button operator colorful" data-value="sqr" role="button">
+                        <span>
+                            <sub class="angsai" style="font-size: 2.5rem;">x</sub>
+                        </span>
+                        <span>
+                            <sup class="segoe" style="font-size: 1rem;
+                            margin-left: 2px;">2</sup>
+                        </span>
+                    </div>
+                    <div id="Cube" class="button operator colorful" data-value="cube" role="button">
+                        <span>
+                            <sub class="angsai" style="font-size: 2rem;">x</sub>
+                        </span>
+                        <span>
+                            <sup class="segoe" style="font-size: 0.90rem;
+                            margin-left: 1px;">3</sup>
+                        </span>
+                    </div>
+                    <div id="fraction" class="button operator colorful" data-value="fraction" role="button">
+                        <sup class="arial" style="margin-top: -11px;
+                        margin-right: -2px; font-size: 1rem;">1</sup>
+                        <span style="font-size: 1.6rem;">/</span>
+                        <sub class="angsai" style="margin-bottom: 3px;
+                        margin-left: -1px;
+                        font-size: 2.5rem;">x</sub>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div id="percentage" style="font-size: 1.8rem;" class="addRow button operator colorful  " data-value="percentage" role="button">
+                        <span style="font-family: arial;">%</span>
+                    </div>
+                    <div id="clear-entry" class="button operator colorful segoe" data-value="CE" role="button">CE</div>
+                    <div class="button operand" data-value="7" role="button">7</div>
+                    <div class="button operand" data-value="4" role="button">4</div>
+                    <div class="button operand" data-value="1" role="button">1</div>
+                    <div id="plus-minus" class="button operator colorful arial" data-value="negate" role="button">
+                        <sup style="margin-top: -10px;
+                        margin-right: -1px;
+                        font-size: 1.35rem;">+</sup>
+                        <span style="font-size: 1.6rem;">/</span>
+                        <sub style="margin-bottom: 5px;
+                        font-size: 1rem;
+                        font-weight: bold;">_</sub>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div id="sqrt" class="addRow button operator colorful" data-value="sqrt" role="button">
+                        <sup class="segoe" style="margin-bottom: 14px; margin-right: -6px; font-size: 1rem;">2</sup>
+                        <img class="iconCalc" src="./Contents/SVG/square-root.svg" alt="">
+                        <sub class="angsai" style="font-size: 2.5rem; margin-left: -7px; margin-top: -2px;">x</sub>
+                    </div>
+                    <div id="clear" class="button operator colorful segoe" data-value="C" role="button">C</div>
+                    <div class="button operand" data-value="8" role="button">8</div>
+                    <div class="button operand" data-value="5" role="button">5</div>
+                    <div class="button operand" data-value="2" role="button">2</div>
+                    <div class="button operand" data-value="0" role="button">0</div>
+                </div>
+
+                <div class="column">
+                    <div id="sqr" class="addRow button operator colorful" data-value="sqr" role="button">
+                        <span>
+                          <sub class="angsai" style="font-size: 2.5rem;">x</sub>
+                        </span>
+                        <span>     
+                            <sup class="segoe" style="font-size: 1rem;
+                            margin-left: 2px;">2</sup>
+                        </span>
+                    </div>
+                    <div class="button operator colorful" data-value="backSpace" role="button">
+                        <img class="iconCalc" src="./Contents/SVG/backspace.svg" alt="">
+                    </div>
+                    <div class="button operand" data-value="9" role="button">9</div>
+                    <div class="button operand" data-value="6" role="button">6</div>
+                    <div class="button operand" data-value="3" role="button">3</div>
+                    <div id="dot" class="button operator colorful" style="font-weight: bold; font-size: 2rem; margin-top: 5px;" data-value="." role="button">.</div>
+                </div>
+
+                <div class="column">
+                    <div id="fraction" class="addRow button operator colorful" data-value="fraction" role="button">
+                        <sup class="arial" style="margin-top: -11px;
+                        margin-right: -2px; font-size: 1rem;">1</sup>
+                        <span style="font-size: 1.6rem;">/</span>
+                        <sub class="angsai" style="margin-bottom: 3px;
+                        margin-left: -1px;
+                        font-size: 2.5rem;">x</sub>
+                    </div>
+                    <div id="divide" class="button operator colorful" data-value="/" role="button">
+                        <img class="iconCalc" src="./Contents/SVG/divide.svg" alt="">
+                    </div>
+                    <div id="multiply" class="button operator colorful" data-value="*" role="button">
+                        <img class="iconCalc multiply" src="./Contents/SVG/multiply.svg" alt="">
+                    </div>
+                    <div id="minus" class="button operator colorful" data-value="-" role="button">
+                        <img class="iconCalc" src="./Contents/SVG/substract.svg" alt="">
+                    </div>
+                    <div id="plus" class="button operator colorful" data-value="+" role="button">
+                        <img class="iconCalc" src="./Contents/SVG/add.svg" alt="">
+                    </div>
+                    <div id="equal" class="button operator colorful" data-value="=" role="button">
+                        <img class="iconCalc" src="./Contents/SVG/equal.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- class for history-memory 30% width -->
+    <div class=" secondColumn">
+        <div class="row-history">History</div>
+        <div class="row-history">Memory</div>
+    </div>
+</body>
+<script src="CalculatorJavaScript.js"></script>
+
+</html>
