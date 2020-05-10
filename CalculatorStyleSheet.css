@@ -17,14 +17,17 @@
     .secondColumn {
         display: none !important;
     }
+
     .firstColumn,
     .firstColumn .calculator {
         width: 100% !important;
     }
+
     #memoryHidden,
     .type .rightType {
         display: flex !important;
     }
+
     .memory {
         width: 100% !important;
     }
@@ -34,12 +37,15 @@
     .addRow {
         display: flex !important;
     }
+
     #column1.column {
         display: none;
     }
+
     .column {
         width: 25% !important;
     }
+
     .button,
     i.button {
         height: 16.66% !important;
@@ -158,6 +164,8 @@ body {
     height: calc(100% - 71px);
     bottom: 0;
     left: 0;
+    padding-left: 1px;
+    padding-right: 1px;
     right: 321px;
     min-width: 300px;
     min-height: 500px;
@@ -255,7 +263,7 @@ div.calc-topkey:active {
 .memory {
     height: 7%;
     display: flex;
-    padding: 0px 1px 3px 3px;
+    padding-bottom: 3px;
     font-family: segoe;
     width: 405px;
     align-items: center;
@@ -291,15 +299,19 @@ div.calc-topkey:active {
 /* buttons; Operator and Operand */
 
 .digit {
-    padding-left: 3px;
+    
     display: flex;
     flex-wrap: wrap;
-    height: 71%;
+    height: 72%;
 }
 
 .column {
     width: 20%;
     flex-wrap: wrap;
+}
+
+.border-right-0 {
+    border-right: none !important;
 }
 
 .button,
