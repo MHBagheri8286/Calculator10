@@ -1,0 +1,27 @@
+@use '../../styles/mixins' as *;
+
+.display {
+  background-color: var(--primary-bg);
+  padding: var(--spacing-md) var(--spacing-lg) var(--spacing-xl);
+  text-align: right;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  &-history {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-sm);
+    min-height: 20px;
+    @include word-break;
+  }
+
+  &-result {
+    font-size: clamp(28px, 8vw, 48px);
+    font-weight: 300;
+    color: var(--text-primary);
+    @include word-break;
+    line-height: 1.2;
+  }
+}
