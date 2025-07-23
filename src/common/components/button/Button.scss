@@ -1,0 +1,39 @@
+@use '../../styles/mixins' as *;
+
+.btn {
+  @include button-base;
+  @include flex-center;
+  aspect-ratio: 1;
+  min-height: 60px;
+  font-size: 18px;
+  font-weight: 400;
+  background-color: var(--secondary-bg);
+  color: var(--text-primary);
+  border: 1px solid transparent;
+
+  @include hover-effect(var(--hover-bg));
+
+  &-number {
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  &-operator {
+    background-color: var(--operator-bg);
+    font-size: 16px;
+  }
+
+  &-equals {
+    background-color: var(--operator-bg);
+    font-size: 20px;
+    font-weight: 600;
+
+    &:hover {
+      background-color: var(--equals-hover);
+    }
+
+    &:active {
+      background-color: color-mix(in srgb, var(--equals-hover) 90%, black);
+    }
+  }
+}
