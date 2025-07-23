@@ -1,0 +1,39 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  @mixin button-base {
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+  
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  }
+  
+  @mixin hover-effect($bg-color: var(--hover-bg)) {
+    &:hover:not(:disabled) {
+      background-color: $bg-color;
+    }
+    
+    &:active:not(:disabled) {
+      background-color: var(--active-bg);
+    }
+  }
+  
+  @mixin word-break {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
