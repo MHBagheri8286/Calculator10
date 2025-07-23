@@ -7,7 +7,11 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier --write \"src/**/*.{ts,tsx,scss,css}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,scss,css}\"",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist node_modules/.vite"
   },
   "dependencies": {
     "react": "^19.1.0",
